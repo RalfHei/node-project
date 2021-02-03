@@ -2,7 +2,17 @@ var socket = io();
 
 const messageInput = document.getElementById('message-input');
 const chatMessages = document.getElementById('chat-messages');
-const userList = document.getElementById('user-list');
+;
+const userList = document.getElementById('users');
+
+function outputUsers(users) {
+    userList.innerHTML = '';
+    users.forEach(user=>{
+      const li = document.createElement('li');
+      li.innerText = user.username;
+      userList.appendChild(li);
+    });
+   }
 
 messageInput.focus();
 
@@ -50,6 +60,7 @@ socket.on('chat_message', msgObj => {
         </div>
     `
     chatMessages.appendChild(item);
+
 });
 
 socket.on('reciveYo', msgObj => {

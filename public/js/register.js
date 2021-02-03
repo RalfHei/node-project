@@ -1,11 +1,10 @@
 const registerButton = document.getElementById('register-button');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
+
 
 registerButton.addEventListener('click', e => {
     if(this.validate(e) == true) {
 
-    const data = {username: usernameInput.value, password: passwordInput.value};
+    const data = {username: username.value, password: password.value};
 
     fetch('/register', {
         method: 'POST',
@@ -31,11 +30,11 @@ registerButton.addEventListener('click', e => {
 
 function validate(e) {
     e.preventDefault();
-  
+
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const passwordAgain = document.getElementById("password-again").value;
-  
+
     if (!username || username === '' || username.length < 6) {
       const nameError = document.getElementById("username-error");
       nameError.innerHTML = `
@@ -43,7 +42,7 @@ function validate(e) {
       `
       return false
     }
-  
+
     if(password.length < 6 || !password) {
       const passwordError = document.getElementById("password-error");
       passwordError.innerHTML = `
@@ -51,7 +50,7 @@ function validate(e) {
       `
       return false
     }
-  
+
     if(password !== passwordAgain) {
       const passwordAgainError = document.getElementById("password-again-error");
       passwordAgainError.innerHTML = `
@@ -64,4 +63,3 @@ function validate(e) {
         return true
     }
   }
-  
