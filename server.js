@@ -30,10 +30,10 @@ const redisClient = redis.createClient({
     port: 6379
 })
 
-redisClient.on('error', function(err) {
+redisClient.on('error', function (err) {
     console.log('Could not establish a connection with redis. ' + err);
 });
-redisClient.on('connect', function(err) {
+redisClient.on('connect', function (err) {
     console.log('Connected to redis successfully');
 });
 
@@ -46,7 +46,7 @@ const sessionMiddleware = session({
     saveUninitialized: false,
     cookie: {
         secure: false, // if true only transmit cookie over https
-        httpOnly: false, // if true prevent client side JS from reading the cookie 
+        httpOnly: false, // if true prevent client side JS from reading the cookie
         maxAge: 1000 * 60 * 60 * 24 // session max age in miliseconds
     }
 });
