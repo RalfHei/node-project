@@ -8,8 +8,11 @@
 #### JavaScript
 
 Ralf Heinloo Ta-19
+
 Kevin Reinov TAK-19
+
 Kris Kristofer Burk TAK-18
+
 Risto Siimer TAK-19
 
 #### HTML/CSS Figma
