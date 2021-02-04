@@ -4,30 +4,30 @@ const regex = '/^[a-zA-Z]*$/g';
 submit.addEventListener("click", validate);
 
 function validate(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const passwordAgain = document.getElementById("password-again").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const passwordAgain = document.getElementById("password-again").value;
 
-  if (!username || username === '' || username.length < 6) {
-    const nameError = document.getElementById("username-error");
-    nameError.innerHTML = `
+    if (!username || username === '' || username.length < 4) {
+        const nameError = document.getElementById("username-error");
+        nameError.innerHTML = `
         <p>Username not valid!</p>
     `
-  }
+    }
 
-  if(password.length < 6 || !password) {
-    const passwordError = document.getElementById("password-error");
-    passwordError.innerHTML = `
+    if (password.length < 6 || !password) {
+        const passwordError = document.getElementById("password-error");
+        passwordError.innerHTML = `
         <p>Password not valid!</p>
     `
-  }
+    }
 
-  if(password !== passwordAgain) {
-    const passwordAgainError = document.getElementById("password-again-error");
-    passwordAgainError.innerHTML = `
+    if (password !== passwordAgain) {
+        const passwordAgainError = document.getElementById("password-again-error");
+        passwordAgainError.innerHTML = `
         <p>Password must be the same!</p>
     `
-  }
+    }
 }
