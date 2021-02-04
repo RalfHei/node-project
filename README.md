@@ -2,16 +2,19 @@
 Jututuba - Node Chat keskkonna arendus.
 
 **Meeskond**
+
 JavaScript
-_Ralf Heinloo Ta-19_
-_Kevin Reinov TAK-19_
-_Kris Kristofer Burk TAK-18_
-_Risto Siimer TAK-19_
+
+Ralf Heinloo Ta-19
+Kevin Reinov TAK-19
+Kris Kristofer Burk TAK-18
+Risto Siimer TAK-19
 
 HTML/CSS Figma
-_Merlin Praks TA-20_
-_Terje Volke TA-20_
-_Kadi Remmelgas-Luka TA-20_
+
+Merlin Praks TA-20
+Terje Volke TA-20
+Kadi Remmelgas-Luka TA-20
 
 Projekti disain ja prototüüpimine:
 
