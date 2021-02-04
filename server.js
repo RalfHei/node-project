@@ -46,7 +46,7 @@ const sessionMiddleware = session({
     saveUninitialized: false,
     cookie: {
         secure: false, // if true only transmit cookie over https
-        httpOnly: false, // if true prevent client side JS from reading the cookie 
+        httpOnly: false, // if true prevent client side JS from reading the cookie
         maxAge: 1000 * 60 * 60 * 24 // session max age in miliseconds
     }
 });

@@ -35,10 +35,10 @@ function validate(e) {
     const password = document.getElementById("password").value;
     const passwordAgain = document.getElementById("password-again").value;
 
-    if (!username || username === '' || username.length < 6) {
+    if (!username || username === '' || username.length < 4) {
       const nameError = document.getElementById("username-error");
       nameError.innerHTML = `
-          <p>Username not valid!</p>
+          <p>Username is too short!</p>
       `
       return false
     }
@@ -46,7 +46,7 @@ function validate(e) {
     if(password.length < 6 || !password) {
       const passwordError = document.getElementById("password-error");
       passwordError.innerHTML = `
-          <p>Password not valid!</p>
+          <p>Password is too short!</p>
       `
       return false
     }
