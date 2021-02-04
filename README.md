@@ -17,7 +17,9 @@ Merlin Praks TA-20
 Terje Volke TA-20
 Kadi Remmelgas-Luka TA-20
 
+
 Projekti disain ja prototüüpimine:
+
 
 
 Prjoekt:
