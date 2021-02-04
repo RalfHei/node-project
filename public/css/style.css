@@ -3,17 +3,12 @@ body {
     display: flexbox;
     background-color: lightgray;
     align-items: center;
+    margin: 0px;
 }
-#curve{
-    position: absolute;
-    top:0px;
-    width: 100%;
-    }
 div{
     display:block;
     align-items: center;
     text-align: center;
-    padding: 10px;
 
 }
 h1{
