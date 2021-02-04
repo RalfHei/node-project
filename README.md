@@ -1,8 +1,25 @@
-**Stack**
-- Node JS / JS / npm
-- Express (Node JS framework)
-- Socket.io
-- Redis
+**Projektipäevad 3-5.veebruar 2021**
+Jututuba - Node Chat keskkonna arendus.
+
+**Meeskond**
+JavaScript
+_Ralf Heinloo Ta-19_
+_Kevin Reinov TAK-19_
+_Kris Kristofer Burk TAK-18_
+_Risto Siimer TAK-19_
+
+HTML/CSS Figma
+_Merlin Praks TA-20_
+_Terje Volke TA-20_
+_Kadi Remmelgas-Luka TA-20_
+
+Projekti disain ja prototüüpimine:
+
+
+Prjoekt:
+
+
+
 
 --------------------------------
 
