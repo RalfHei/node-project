@@ -19,6 +19,12 @@ loginButton.addEventListener('click', e => {
         if ( data.response == 'success' ) {
             window.location.href = "/";
         }
+        else if (data.response == 'errorWrongCredentials'){
+            const usernameError = document.getElementById('username-error');
+            usernameError.innerHTML = `
+            <p>Username or password is not valid!</p>
+        `
+        }
     })
     .catch(error => {
         console.error('Error:', error);
