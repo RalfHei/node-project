@@ -1,10 +1,10 @@
 const registerButton = document.getElementById('register-button');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
+
 
 registerButton.addEventListener('click', e => {
-    console.log(314);
-    const data = {username: usernameInput.value, password: passwordInput.value};
+    if(this.validate(e) == true) {
+
+    const data = {username: username.value, password: password.value};
 
     fetch('/register', {
         method: 'POST',
@@ -25,4 +25,41 @@ registerButton.addEventListener('click', e => {
         console.error('Error:', error);
     });
 
+}
 });
+
+function validate(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const passwordAgain = document.getElementById("password-again").value;
+
+    if (!username || username === '' || username.length < 6) {
+      const nameError = document.getElementById("username-error");
+      nameError.innerHTML = `
+          <p>Username not valid!</p>
+      `
+      return false
+    }
+
+    if(password.length < 6 || !password) {
+      const passwordError = document.getElementById("password-error");
+      passwordError.innerHTML = `
+          <p>Password not valid!</p>
+      `
+      return false
+    }
+
+    if(password !== passwordAgain) {
+      const passwordAgainError = document.getElementById("password-again-error");
+      passwordAgainError.innerHTML = `
+          <p>Password must be the same!</p>
+      `
+      return false
+    }
+    else{
+        console.log("yooo")
+        return true
+    }
+  }
