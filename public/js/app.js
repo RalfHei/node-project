@@ -1,6 +1,8 @@
 var socket = io();
 
 const messageInput = document.getElementById('message-input');
+const privateInput = document.getElementById('message-private');
+const chatPrivate = document.getElementsByClassName('chat-private');
 const chatMessages = document.getElementsByClassName('chat-messages');
 ;
 const userList = document.getElementById('users');
@@ -13,6 +15,14 @@ function outputUsers(users) {
       userList.appendChild(li);
     });
    }
+//privateInput.focus();
+
+   /*privateInput.addEventListener('keydown', event => {
+    if (event.key == 'Enter' && privateInput.value.trim() !== '') {
+        socket.emit('chat_message',privateInput.value);
+        privateInput.value = '';
+    }
+});*/
 
 messageInput.focus();
 
@@ -108,6 +118,7 @@ document.getElementById('logout').onclick = function() {
 
   function create(el) {
     let socketId = el.currentTarget.dataset.socketid;
+    console.log(el)
     console.log(socketId)
     const header = document.getElementById('header');
     const body_tab = document.getElementById('tab-contents');
@@ -121,10 +132,10 @@ console.log(tab_id)
       header.append(tab_header);
       let tab_body = document.createElement("div");
       tab_body.setAttribute("id", socketId)
-      tab_body.classList.add("chat-messages")
+      tab_body.classList.add("chat-private")
       tab_body.innerHTML = `<div
       class="px-2 chat-footer bg-white opacity-60 focus-within:opacity-100 rounded border border-gray-400 h-20 absolute left-2.5 right-2.5 bottom-10 m-4">
-      <input class="px-4 bg-transparent focus:outline-none h-10 w-full" id="message-input" type="text"
+      <input class="px-4 bg-transparent focus:outline-none h-10 w-full" id="private-input" type="text"
           value="" placeholder="Aa" />
       <div class="h-10  border-t w-full"></div>
   </div>`
