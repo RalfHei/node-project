@@ -4,31 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/tailwind.css">
     <title>Login</title>
 </head>
 
 <body>
-    <div>
-        <form x-data="{password: '',password_confirm: ''}">
-            <div>
-                <label for="username">Username</label>
-                <input placeholder="" id="username" type="text" />
-            </div>
-            
-            <div>
-                <label for="password">Password</label>
-                <input placeholder="" id="password" type="password" x-model="password" />
-            </div>
-            
-            <div>
-                <button type="button" id="login-button">Login</button>
-            </div>
-            <div>
-                <a href="/public/register.html" id="register-button">Register</a>
-            </div>
-        </form>
+    <div class="w-screen h-screen flex items-center justify-center bg-gray-100">
+        <div class="w-96 rounded bg-white shadow-lg px-6">
+            <h2 class="font-semibold text-gray-600 text-2xl py-4 mb-4">
+                Node project
+            </h2>
+            <form x-data="{password: '',password_confirm: ''}">
+                <div class="">
+                    <label for="username" class="block text-xs font-semibold text-gray-600 uppercase">Username</label>
+                    <input class="block w-full p-1 mt-1 mb-4
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200" id="username" name="username"
+                        type="text">
+                    <span id="username-error" class="text-red-500"></span>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input x-model="password" id="password" class="block w-full p-1 mt-1 mb-4 
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200" type="password">
+                    <span id="password-error" class="text-red-500"></span>
+                </div>
+                <div>
+                    <button type="button" id="login-button" class="w-full py-3 mt-8 bg-gray-800 rounded-sm
+                    font-medium text-white uppercase
+                    focus:outline-none hover:bg-gray-700 hover:shadow-none">Log in</button>
+                </div>
+                <div class="sm:flex sm:flex-wrap mt-8 sm:mb-4 text-sm text-center">
+                    <span class="mr-2">Dont have an account?</span>
+                    <a href="/public/register.html" class="flex-2 underline">
+                        Register
+                    </a>
+            </form>
+        </div>
     </div>
     <script src="/public/js/login.js"></script>
 </body>
+
 </html>

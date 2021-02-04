@@ -4,36 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/tailwind.css">
     <title>Register</title>
 </head>
 
 <body>
-    <div>
-        <h2 class="font-semibold text-white text-2xl">
-            Register
-        </h2>
-        <span id="register-error"></span>
-        <form>
-            <div>
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text">
-                <span id="username-error"></span>
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <input id="password" type="password">
-                <span id="password-error"></span>
-            </div>
-            <div>
-                <label for="password-again">Password Confirm</label>
-                <input id="password-again" type="password">
-                <span id="password-again-error"></span>
-            </div>
-            <div>
-                <button type="button" id="register-button">Register</button>
-            </div>
-        </form>
+    <div class="w-screen h-screen flex items-center bg-gray-100 justify-center">
+        <div class="rounded w-96 bg-white shadow-lg px-6">
+            <h2 class="font-semibold text-gray-600 text-2xl p-4 mb-4">
+                Node project
+            </h2>
+            <span id="register-error"></span>
+            <form>
+                <div class="">
+                    <label for="username" class="block text-xs font-semibold text-gray-600 uppercase">Username</label>
+                    <input class="block w-full p-1 mt-1 mb-4
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200" id="username" name="username"
+                        type="text">
+                    <span id="username-error" class="text-red-500"></span>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" class="block w-full p-1 mt-1 mb-4 
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200" type="password">
+                    <span id="password-error" class="text-red-500"></span>
+                </div>
+                <div>
+                    <label for="password-again">Password Confirm</label>
+                    <input id="password-again" class="block w-full p-1 mt-1 mb-4 
+                    text-gray-800 appearance-none 
+                    border-b-2 border-gray-100
+                    focus:text-gray-500 focus:outline-none focus:border-gray-200" type="password">
+                    <span id="password-again-error" class="text-red-500"></span>
+                </div>
+                <div>
+                    <button type="button" id="register-button" class="w-full py-3 mt-8 bg-gray-800 rounded-sm
+                    font-medium text-white uppercase
+                    focus:outline-none hover:bg-gray-700 hover:shadow-none">Register</button>
+                </div>
+                <div class="sm:flex sm:flex-wrap mt-8 sm:mb-4 text-sm text-center">
+                    <span class="mr-2">Allready have an account?</span>
+                    <a href="/public/login.html" class="flex-2 underline">
+                        Login
+                    </a>
+            </form>
+        </div>
     </div>
     <script src="/public/js/register.js"></script>
 </body>

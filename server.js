@@ -74,7 +74,7 @@ app.get("/", (req, res) => {
 
 app.post("/login", (req, res) => {
     redisClient.hgetall('users', (err, result) => {
-
+        console.log(redisClient.hgetall('users'))
         let isSuccess = false;
 
         if (req.body.username in result) {
@@ -90,7 +90,8 @@ app.post("/login", (req, res) => {
             console.log('login', req.body.username, req.body.password, sess.username, sess.password);
             res.json({ response: 'success' });
         } else {
-            res.json({ response: 'errorWrongCredentials' });
+            let result = res.json({ response: 'errorWrongCredentials' });
+            console.log(result)
         }
     });
 });
@@ -137,6 +138,7 @@ io.on('connection', (socket) => {
     userList[sess.username] = socket.id;
     io.emit('updateUserList', userList);
 
+
     // On chat message from user emit to all users who are connected
     socket.on('chat_message', msg => {
         io.emit('chat_message', { 'message': msg, 'socketId': socket.id, 'user': sess.username });
@@ -149,9 +151,11 @@ io.on('connection', (socket) => {
         io.emit('updateUserList', userList);
     });
 
-    socket.on('sendYo', data => {
-        socket.to(data.socketId).emit('reciveYo', { 'user': sess.username });
-    });
+    socket.on('sendYo', socket => {
+  socket.on("private message", (anotherSocketId, msg) => {
+    socket.to(anotherSocketId).emit("reciveYo", socket.id, msg);
+  });
+});
 });
 
 

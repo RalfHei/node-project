@@ -15,6 +15,7 @@ loginButton.addEventListener('click', e => {
     })
     .then(res => res.json())
     .then(data => {
+        console.log(data)
         if ( data.response == 'success' ) {
             window.location.href = "/";
         }
