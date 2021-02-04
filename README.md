@@ -20,7 +20,7 @@ Kadi Remmelgas-Luka TA-20
 
 ### Projekti disain ja prototüüpimine:
 
-[Figma] https://www.figma.com/file/VSA65V8XmWH5VqQT7F1vd5/Untitled?node-id=0%3A1
+[Figma](https://www.figma.com/file/VSA65V8XmWH5VqQT7F1vd5/Untitled?node-id=0%3A1)
 
 
 ### Prjoekt:
