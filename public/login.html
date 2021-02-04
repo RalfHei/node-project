@@ -4,26 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/public/css/style.css">
     <title>Login</title>
 </head>
 
 <body>
     <div>
+        <svg width="413" height="198" viewBox="0 0 413 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M185.554 120.832C106.637 119.176 12.4784 117.201 1 40.4477V1H412V197.739C412 148.804 343 134.823 343 134.823C343 134.823 305 123.338 186 120.841L185.554 120.832Z"
+                fill="#F4D7D7" stroke="#F4D7D7" />
+        </svg>
+    </div>
+    <div>
+        <h1>Node chat</h1>
+    </div>
+    <div>
+        <h2>Log in</h2>
+    </div>
+    <div>
         <form x-data="{password: '',password_confirm: ''}">
             <div>
                 <label for="username">Username</label>
                 <input placeholder="" id="username" type="text" />
             </div>
-            
+
             <div>
                 <label for="password">Password</label>
                 <input placeholder="" id="password" type="password" x-model="password" />
             </div>
-            
+
             <div>
                 <button type="button" id="login-button">Login</button>
             </div>
+            <div>Don't have an account?</div>
             <div>
                 <a href="/public/register.html" id="register-button">Register</a>
             </div>
@@ -31,4 +46,5 @@
     </div>
     <script src="/public/js/login.js"></script>
 </body>
+
 </html>
