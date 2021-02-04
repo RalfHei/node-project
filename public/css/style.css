@@ -35,8 +35,10 @@ h2{
     background-color:olivedrab;
     color: snow;
     padding-top: 10px;
-
-
+}
+.contacts{
+    display: flex;
+    background-color: darkslateblue;
 }
 .chat {
     display: flex;

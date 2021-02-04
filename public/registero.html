@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <div>
+        <svg viewBox="0 60 413 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M185.554 120.832C106.637 119.176 12.4784 117.201 1 40.4477V1H412V197.739C412 148.804 343 134.823 343 134.823C343 134.823 305 123.338 186 120.841L185.554 120.832Z"
+                fill="#F4D7D7" stroke="#F4D7D7" />
+        </svg>
+    </div>
+    <div>
+        <h1>Node chat</h1>
+    </div>
+    <div>
+        <h2> Register</h2>
+    </div>
+
+    </h2>
+    <div> <span id=" register-error"></span>
+        <form>
+            <div>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <span id="username-error"></span>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password">
+                <span id="password-error"></span>
+            </div>
+            <div>
+                <label for="password-again">Password Confirm</label>
+                <input id="password-again" type="password">
+                <span id="password-again-error"></span>
+            </div>
+            <div>
+                <button type="button" id="register-button">Register</button>
+            </div>
+        </form>
+    </div>
+    <script src="/public/js/register.js"></script>
+</body>
+
+</html>
