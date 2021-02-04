@@ -1,6 +1,7 @@
-### Projektipäevad 3-5.veebruar 2021
+### Projektipäevad 3.- 5.veebruar 2021
 
-Jututuba - Node Chat keskkonna arendus.
+## Jututuba - Node Chat keskkonna arendus.
+
 
 **Meeskond**
 
