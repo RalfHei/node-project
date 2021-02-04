@@ -35,9 +35,19 @@ socket.on('updateUserList', userListObj => {
     for (const userName in userListObj) {
         userList.innerHTML += `
         <div>
-            <p>${ userName }</p>
+            <p class="user" data-socketid="${ userListObj[userName] }">${ userName }</p>
         </div>`;
     }
+
+    const users = document.getElementsByClassName('user');
+
+    Array.prototype.forEach.call(users, el => {
+        el.addEventListener('click', e => {
+            console.log(e.currentTarget.dataset.socketid);
+            socket.emit('sendYo', { socketId: e.currentTarget.dataset.socketid });
+            console.log('click');
+        });
+    });
 });
 
 socket.on('chat_message', msgObj => {
@@ -51,6 +61,18 @@ socket.on('chat_message', msgObj => {
     `
     chatMessages.appendChild(item);
 
+});
+
+socket.on('reciveYo', msgObj => {
+    console.log(msgObj)
+    const item = document.createElement('div');
+    item.innerHTML = `
+        <div>
+            <p><b>${ msgObj.user }</b></p>
+            <p>Yo!</p>
+        </div>
+    `
+    chatMessages.appendChild(item);
 });
 
 document.getElementById('logout').onclick = function() {
