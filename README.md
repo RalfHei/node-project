@@ -67,8 +67,10 @@ Suhtluskanalid: **Slack**, **Microsoft Teams**.
 - ei tulnud hästi välja, aga õpetamisoskust vast :)
 - tailwind
 
-
-
+**Kevin**
+- okay ülesanne
+- Koostöö meeskonnaga
+- Tuletas meelde tailwindi, js statements & inputs & outputs ja redis chat
 
 
 
