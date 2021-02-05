@@ -55,7 +55,19 @@ Suhtluskanalid: **Slack**, **Microsoft Teams**.
 [Figma](https://www.figma.com/file/VSA65V8XmWH5VqQT7F1vd5/Untitled?node-id=0%3A1)
 
 
-### Prjoekt:
+### Projekt:
+
+### Iga tiimi liikme nime ja vastuseid kolmele küsimusele
+Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
+Üks pehme oskus, mida õppisin ja endas arendasin
+Üks tehniline oskus, mida õppisin ja endas arendasin
+
+**Terje**
+- olen ülesandega rahul
+- ei tulnud hästi välja, aga õpetamisoskust vast :)
+- tailwind
+
+
 
 
 
