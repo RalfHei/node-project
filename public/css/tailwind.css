@@ -525,6 +525,7 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  background: linear-gradient(180deg, #363EFA 9.9%, rgba(152, 54, 250, 0) 52.71%);
 }
 
 .bg-gray-50 {
@@ -822,7 +823,7 @@ video {
 }
 
 .shadow-2xl {
-  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --tw-shadow: 0 25px 50px -12px rgba(18, 35, 244, 1);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
